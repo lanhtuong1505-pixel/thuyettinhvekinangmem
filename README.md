@@ -1,181 +1,141 @@
-#SOPC GROUP 
 <!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thuyết trình: Vai trò của Kỹ năng Mềm đối với Tuổi trẻ</title>
+<title>Bài Thuyết Trình: Vai Trò Của Kỹ Năng Mềm Đối Với Tuổi Trẻ</title>
 <style>
   body {
-    font-family: "Segoe UI", sans-serif;
     margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #ff5722, #ff9800);
+    color: white;
     overflow: hidden;
-    background: linear-gradient(to bottom, #faf9f6, #e8edf3);
-    position: relative;
   }
 
-  /* Slide cơ bản */
   .slide {
     display: none;
-    opacity: 0;
     height: 100vh;
     padding: 60px;
     text-align: center;
     transition: opacity 1s ease-in-out;
   }
+
   .active {
     display: block;
-    opacity: 1;
+    animation: fadeIn 1.2s;
   }
 
-  h1, h2 {
-    color: #2a4d69;
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
   }
+
+  h1 {
+    font-size: 2.8em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 10px #000;
+  }
+
   p {
-    font-size: 20px;
-    color: #333;
-    max-width: 900px;
-    margin: 15px auto;
+    font-size: 1.3em;
     line-height: 1.7;
-  }
-  img {
-    width: 400px;
-    border-radius: 12px;
-    margin: 20px auto;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    max-width: 900px;
+    margin: 0 auto;
   }
 
-  /* Nút chuyển trang */
-  button {
+  .btn {
     position: fixed;
     bottom: 20px;
-    padding: 12px 25px;
+    right: 40px;
+    background: rgba(255,255,255,0.3);
     border: none;
-    background: #4b86b4;
-    color: white;
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 30px;
     font-size: 18px;
-    border-radius: 8px;
     cursor: pointer;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-    transition: background 0.3s ease;
+    transition: 0.3s;
   }
-  button:hover {
-    background: #345d80;
+  .btn:hover {
+    background: rgba(255,255,255,0.6);
+    color: #ff5722;
   }
-  #nextBtn { right: 40px; }
-  #prevBtn { left: 40px; }
 
   /* Lá vàng rơi */
   .leaf {
-    position: absolute;
-    top: -50px;
-    width: 35px;
-    height: 35px;
-    background: url('https://png.pngtree.com/png-vector/20231023/ourmid/pngtree-yellow-leaf-png-image_10105868.png') no-repeat center/contain;
+    position: fixed;
+    top: -10%;
+    width: 25px;
+    height: 25px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/415/415733.png');
+    background-size: contain;
+    background-repeat: no-repeat;
     opacity: 0.8;
     animation: fall linear infinite;
   }
 
   @keyframes fall {
-    0% {
-      transform: translateY(0) rotate(0deg);
-      opacity: 0.9;
-    }
-    100% {
-      transform: translateY(110vh) rotate(360deg);
-      opacity: 0;
-    }
+    0% {transform: translateY(0) rotate(0deg);}
+    100% {transform: translateY(110vh) rotate(360deg);}
   }
 </style>
 </head>
 <body>
 
-<!-- Slide 1 -->
-<div class="slide active" id="slide1">
-  <h1>Vai trò của Kỹ năng Mềm đối với Tuổi trẻ</h1>
-  <p>Kính chào quý thầy cô và các bạn. Em là [Tên của bạn]. Hôm nay, em xin được trình bày về một chủ đề gần gũi nhưng rất quan trọng trong hành trình trưởng thành của mỗi người trẻ: <b>Vai trò của kỹ năng mềm đối với tuổi trẻ</b>.</p>
-  <img src="https://img.freepik.com/free-vector/people-giving-high-five-concept-illustration_114360-1064.jpg" alt="Chào hỏi">
+<div class="slide active">
+  <h1>Vai Trò Của Kỹ Năng Mềm Đối Với Tuổi Trẻ</h1>
+  <p>Kính chào quý thầy cô và các bạn. Tôi là [Tên của bạn], hôm nay tôi xin trình bày về một chủ đề vô cùng quan trọng: <b>Vai trò của kỹ năng mềm đối với tuổi trẻ</b>. Trong một thế giới thay đổi nhanh chóng, kiến thức chuyên môn thôi chưa đủ để đảm bảo thành công và hạnh phúc. Chính kỹ năng mềm mới là chìa khóa mở ra cánh cửa tương lai.</p>
 </div>
 
-<!-- Slide 2 -->
-<div class="slide" id="slide2">
-  <h2>I. Kỹ năng Mềm là gì?</h2>
-  <p>Kỹ năng mềm là tập hợp những phẩm chất, thói quen và khả năng liên quan đến cảm xúc, giao tiếp, tư duy và cách ứng xử của con người. Đây không phải là kiến thức chuyên môn, mà là cách chúng ta làm việc, tương tác và quản lý bản thân trong cuộc sống. Ví dụ như kỹ năng giao tiếp, làm việc nhóm, tư duy phản biện, quản lý thời gian hay khả năng thích ứng.</p>
-  <img src="https://img.freepik.com/free-vector/soft-skills-concept-illustration_114360-8186.jpg" alt="Soft skills">
+<div class="slide">
+  <h1>Kỹ Năng Mềm Là Gì?</h1>
+  <p>Kỹ năng mềm là những kỹ năng liên quan đến trí tuệ cảm xúc, khả năng tương tác xã hội và quản lý bản thân. Chúng bao gồm giao tiếp, làm việc nhóm, giải quyết vấn đề, tư duy phản biện, quản lý thời gian, khả năng thích ứng và hơn thế nữa. Đây là những năng lực giúp chúng ta kết nối, thấu hiểu và hợp tác hiệu quả trong học tập và cuộc sống.</p>
 </div>
 
-<!-- Slide 3 -->
-<div class="slide" id="slide3">
-  <h2>II. Vai trò của Kỹ năng Mềm</h2>
-  <p>Kỹ năng mềm chính là “chiếc chìa khóa thứ hai” mở ra cánh cửa thành công. Một người có thể giỏi chuyên môn, nhưng nếu thiếu khả năng giao tiếp, hợp tác hoặc giải quyết vấn đề, họ rất dễ bị tụt lại phía sau. Nhiều nghiên cứu cho thấy hơn 75% sự thành công trong công việc đến từ kỹ năng mềm, chứ không chỉ từ kiến thức chuyên môn.</p>
-  <img src="https://img.freepik.com/free-vector/leadership-concept-illustration_114360-1081.jpg" alt="Leadership">
+<div class="slide">
+  <h1>Tầm Quan Trọng Của Kỹ Năng Mềm</h1>
+  <p>Nhiều nghiên cứu chỉ ra rằng kỹ năng mềm chiếm tới 75% sự thành công của mỗi người. Tuổi trẻ là giai đoạn định hình nhân cách và sự nghiệp, nên việc rèn luyện kỹ năng mềm là yếu tố then chốt giúp mỗi cá nhân phát triển toàn diện.</p>
+  <p>Chúng giúp tăng cơ hội việc làm, xây dựng các mối quan hệ tốt đẹp, và nâng cao khả năng thích ứng trong xã hội đầy biến động.</p>
 </div>
 
-<!-- Slide 4 -->
-<div class="slide" id="slide4">
-  <h2>III. Tác động đến đời sống của giới trẻ</h2>
-  <p>Với tuổi trẻ, kỹ năng mềm không chỉ giúp học tốt hơn mà còn giúp chúng ta tự tin hơn trong giao tiếp, kiểm soát cảm xúc và xây dựng mối quan hệ tích cực. Nhờ kỹ năng lắng nghe, thấu hiểu và làm việc nhóm, chúng ta dễ hòa nhập, được bạn bè và đồng nghiệp tin tưởng. Kỹ năng mềm cũng giúp vượt qua thất bại, thích nghi trong môi trường mới và định hướng bản thân tốt hơn.</p>
-  <img src="https://img.freepik.com/free-vector/goal-achievement-concept-illustration_114360-1422.jpg" alt="Success">
+<div class="slide">
+  <h1>Lợi Ích Cụ Thể</h1>
+  <p><b>Thứ nhất</b>, kỹ năng mềm là chìa khóa của sự nghiệp. Nhà tuyển dụng cần người biết giao tiếp, làm việc nhóm, có tư duy phản biện. <b>Thứ hai</b>, kỹ năng mềm giúp xây dựng mối quan hệ chất lượng thông qua sự lắng nghe, đồng cảm. <b>Thứ ba</b>, kỹ năng mềm giúp phát triển bản thân, tạo sự tự tin, khả năng lãnh đạo và sáng tạo.</p>
 </div>
 
-<!-- Slide 5 -->
-<div class="slide" id="slide5">
-  <h2>IV. Hậu quả khi thiếu kỹ năng mềm</h2>
-  <p>Ngược lại, thiếu kỹ năng mềm khiến nhiều bạn trẻ dễ bị cô lập, thiếu tự tin và khó hòa nhập trong môi trường học tập hoặc làm việc. Không ít sinh viên học giỏi nhưng lại gặp khó khăn trong việc thuyết trình, phỏng vấn hay làm việc nhóm. Điều đó khiến họ đánh mất nhiều cơ hội quý giá cho sự nghiệp tương lai.</p>
-  <img src="https://img.freepik.com/free-vector/conflict-concept-illustration_114360-2723.jpg" alt="Conflict">
+<div class="slide">
+  <h1>Hậu Quả Khi Thiếu Kỹ Năng Mềm</h1>
+  <p>Một người giỏi chuyên môn nhưng thiếu kỹ năng mềm dễ gặp khó khăn trong công việc, xung đột trong giao tiếp và khó thăng tiến. Nhiều sinh viên tốt nghiệp loại giỏi nhưng thất nghiệp vì không thể làm việc nhóm hoặc giao tiếp hiệu quả.</p>
 </div>
 
-<!-- Slide 6 -->
-<div class="slide" id="slide6">
-  <h2>V. Cách rèn luyện kỹ năng mềm</h2>
-  <p>Để phát triển kỹ năng mềm, chúng ta cần bắt đầu từ những hành động nhỏ: tham gia các hoạt động tập thể, câu lạc bộ, thử sức với vai trò lãnh đạo, luyện thuyết trình, hoặc học cách lắng nghe và làm việc nhóm. Hãy dám nói, dám làm và dám thể hiện bản thân. Chính quá trình này giúp chúng ta trưởng thành, tự tin và bản lĩnh hơn mỗi ngày.</p>
-  <img src="https://img.freepik.com/free-vector/teamwork-concept-illustration_114360-9026.jpg" alt="Teamwork">
+<div class="slide">
+  <h1>Kết Luận Và Lời Kêu Gọi</h1>
+  <p>Tóm lại, kỹ năng mềm không chỉ là lợi thế mà là điều kiện đủ để tuổi trẻ thành công trong thế kỷ 21. Tôi kêu gọi các bạn hãy chủ động rèn luyện kỹ năng mềm: tham gia hoạt động ngoại khóa, luyện giao tiếp, phát triển tư duy phản biện và tự tin thể hiện bản thân. <b>Kỹ năng mềm chính là hành trang quý giá nhất cho tương lai của chúng ta.</b></p>
+  <p><i>Xin cảm ơn thầy cô và các bạn đã lắng nghe!</i></p>
 </div>
 
-<!-- Slide 7 -->
-<div class="slide" id="slide7">
-  <h2>VI. Kết luận</h2>
-  <p>Tóm lại, kỹ năng mềm không chỉ là yếu tố phụ mà là nền tảng giúp tuổi trẻ tiến xa hơn trong học tập và cuộc sống. Nó giúp chúng ta không chỉ “biết” mà còn “làm được”, không chỉ “thành công” mà còn “thành nhân”. Vì vậy, ngay từ hôm nay, hãy bắt đầu rèn luyện kỹ năng mềm – hành trang quý giá nhất trên con đường hướng đến tương lai.</p>
-  <p><b>Em xin chân thành cảm ơn quý thầy cô và các bạn đã lắng nghe!</b></p>
-</div>
-
-<!-- Nút chuyển -->
-<button id="prevBtn">← Trước</button>
-<button id="nextBtn">Tiếp →</button>
+<button class="btn" onclick="nextSlide()">Trang tiếp ➜</button>
 
 <script>
-  // Slide chuyển động
-  let current = 1;
-  const slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
 
-  function showSlide(n) {
-    slides.forEach(s => s.classList.remove("active"));
-    slides[n-1].classList.add("active");
-  }
+function nextSlide() {
+  slides[currentSlide].classList.remove('active');
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add('active');
+}
 
-  document.getElementById("nextBtn").onclick = () => {
-    current++;
-    if (current > slides.length) current = slides.length;
-    showSlide(current);
-  }
-
-  document.getElementById("prevBtn").onclick = () => {
-    current--;
-    if (current < 1) current = 1;
-    showSlide(current);
-  }
-
-  // Lá vàng rơi (nhiều hơn)
-  const numLeaves = 30;
-  for (let i = 0; i < numLeaves; i++) {
-    const leaf = document.createElement("div");
-    leaf.classList.add("leaf");
-    leaf.style.left = Math.random() * 100 + "vw";
-    leaf.style.animationDuration = 5 + Math.random() * 7 + "s";
-    leaf.style.animationDelay = Math.random() * 5 + "s";
-    leaf.style.transform = `rotate(${Math.random() * 360}deg)`;
-    document.body.appendChild(leaf);
-  }
+// tạo nhiều lá rơi ngẫu nhiên
+for (let i = 0; i < 40; i++) {
+  let leaf = document.createElement('div');
+  leaf.classList.add('leaf');
+  leaf.style.left = Math.random() * 100 + 'vw';
+  leaf.style.animationDuration = (8 + Math.random() * 10) + 's';
+  leaf.style.animationDelay = Math.random() * 5 + 's';
+  document.body.appendChild(leaf);
+}
 </script>
 
 </body>
